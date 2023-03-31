@@ -67,6 +67,32 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
+                label="Artist Name"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.firstName}
+                name="artistName"
+                error={!!touched.artistName && !!errors.artistName}
+                helperText={touched.artistName && errors.artistName}
+                sx={{ gridColumn: "span 2" }}
+              />
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="ipiNumber"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.ipiNumber}
+                name="ipiNumber"
+                error={!!touched.ipiNumber && !!errors.ipiNumber}
+                helperText={touched.ipiNumber && errors.ipiNumber}
+                sx={{ gridColumn: "span 2" }}
+              />
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
                 label="Email"
                 onBlur={handleBlur}
                 onChange={handleChange}
@@ -74,7 +100,7 @@ const Form = () => {
                 name="email"
                 error={!!touched.email && !!errors.email}
                 helperText={touched.email && errors.email}
-                sx={{ gridColumn: "span 4" }}
+                sx={{ gridColumn: "span 2" }}
               />
               <TextField
                 fullWidth
@@ -87,7 +113,7 @@ const Form = () => {
                 name="contact"
                 error={!!touched.contact && !!errors.contact}
                 helperText={touched.contact && errors.contact}
-                sx={{ gridColumn: "span 4" }}
+                sx={{ gridColumn: "span 2" }}
               />
               <TextField
                 fullWidth
@@ -134,6 +160,8 @@ const phoneRegExp =
 const checkoutSchema = yup.object().shape({
   firstName: yup.string().required("required"),
   lastName: yup.string().required("required"),
+  artistName: yup.string().required("required"),
+  ipiNumber: yup.string().required("required"),
   email: yup.string().email("invalid email").required("required"),
   contact: yup
     .string()
@@ -145,6 +173,8 @@ const checkoutSchema = yup.object().shape({
 const initialValues = {
   firstName: "",
   lastName: "",
+  ipiNumber: "",
+  artistName: "",
   email: "",
   contact: "",
   address1: "",
