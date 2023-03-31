@@ -165,6 +165,20 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
+              title="My Catalog"
+              to="/catalog"
+              icon={<HelpOutlineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+              <Item
+              title="New Release"
+              to="/newrelease"
+              icon={<HelpOutlineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
               title="Calendar"
               to="/calendar"
               icon={<CalendarTodayOutlinedIcon />}
@@ -178,12 +192,6 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
           </Box>
         </Menu>
       </ProSidebar>
