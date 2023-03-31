@@ -80,7 +80,7 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="ipiNumber"
+                label="IPI Number"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.ipiNumber}
